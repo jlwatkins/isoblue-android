@@ -202,27 +202,6 @@ public class ISOBlueDemo extends Activity {
 		mOutStringBuffer.setLength(0);
 	}
 
-	//Joseph Watkins
-	//message receiving
-
-	//add documentation comments
-
-	private void receiveMessage(org.isoblue.isobus.Message message) {
-		// Check that we're actually connected before trying anything
-		if (mChatService.getState() != BluetoothService.STATE_CONNECTED) {
-			Toast.makeText(this, R.string.not_connected, Toast.LENGTH_SHORT)
-					.show();
-			return;
-		}
-
-		//set the message to be the incoming data 
-		mChatService.read(message);
-		
-		//need to have error catching because we are not sending a message out
-
-		//need to fullu understand mmSocket and mChatService
-	}
-
 	private final void setStatus(int resId) {
 		final ActionBar actionBar = getActionBar();
 		actionBar.setSubtitle(resId);
