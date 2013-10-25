@@ -20,7 +20,7 @@
  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-
+ // Sub Authors - Aneesh Samudrala and Joseph Watkins
 package org.isoblue.ISOBlueDemo;
 
 import java.io.File;
@@ -68,4 +68,9 @@ public class ISOBUSOpenHelper extends SQLiteOpenHelper {
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
 	}
-}
+	
+	public void onOpen(SQLiteDatabase db)
+	{
+		//TODO setup the open incase the database we do not have yet needs to be created
+	}
+		}
